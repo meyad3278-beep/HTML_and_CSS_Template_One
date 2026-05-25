@@ -1,0 +1,140 @@
+:root{
+  --main-color:#10cab7;
+}
+*{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Work Sans" ,Sans-Serif;
+}
+.container{
+  padding-left: 15px; 
+  padding-right: 15px;
+  margin-right: auto; 
+  margin-left: auto;
+}
+}
+
+@media (min-width: 768px){
+  .container{
+    width: 750px;
+  }
+}
+@media (min-width: 992px){
+  .container{
+    width: 970px;
+  }
+}
+@media (min-width: 1200px){
+  .container{
+    width: 1170px;
+  }
+}
+
+.header{
+  padding: 20px;
+}
+
+.header .container{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.header .logo{
+  width: 60px;
+}
+.header  .links{
+  position: relative;
+}
+.header .links:hover .icon span:nth-child(2){
+  width: 100%;
+}
+.header .links .icon{
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.header .links .icon span{
+  margin-bottom: 5px;
+  background-color: #333;
+  height: 2px;
+}
+.header .links .icon span:first-child{
+  width: 100%;
+}
+.header .links .icon span:nth-child(2){
+  width: 60%;
+   transition: 0.3s;
+}
+.header .links .icon span:last-child{
+  width: 100%;
+}
+.header .links ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+   right: 0;
+   top: calc(100% + 15px);
+   background-color: #f6f6f6; 
+   min-width: 200px;
+   display: none;
+}
+.header .links:hover ul{
+  display: block;
+}
+.header .links ul:before{
+  content:"";
+  border-style: solid;
+  border-width: 10px;
+  border-color:  transparent transparent
+  #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links ul li a{
+  display: block;
+  text-decoration: none;
+  padding: 15px; 
+  color: #333;
+  transition: .3s;
+  cursor: ;
+}
+.header .links ul li a:hover{
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{ 
+  border-bottom: 1px solid #ddd;
+}
+.landing {
+    background-image: url('../images2/pexels-pixabay-355770.jpg');
+    background-size: cover;
+    height: calc(100vh - 64px);
+    z-index: -1;
+   position: relative;
+}
+.landing .intro-text{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+   width: 320px; 
+   max-width: 100%;
+}
+.landing .intro-text h1{
+  margin: 0;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 50px;
+ 
+  
+}
+.landing .intro-text p{
+  font-size: 19px; 
+  line-height: 1.8;
+}
